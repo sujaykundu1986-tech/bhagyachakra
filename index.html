@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভাগ্যচক্র - বৈদিক জ্যোতিষ ও কুষ্ঠি সেবা</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- টপ নেভিগেশন বার -->
+  <header class="navbar">
+    <div class="logo">
+      <i class="fa-solid fa-sun-plant-wilt"></i> ভাগ্যচক্র
+    </div>
+    <nav>
+      <a href="#horoscope">দৈনিক রাশিফল</a>
+      <a href="#matchmaking">যোটক বিচার</a>
+      <a href="#services">পেইড সেবা</a>
+      <a href="#booking" class="btn-highlight">পরামর্শ নিন</a>
+    </nav>
+  </header>
+
+  <!-- ব্যানার ও অফার সেকশন -->
+  <section class="hero-banner">
+    <div class="hero-content">
+      <h1>আপনার ভাগ্য ও ভবিষ্যৎ জানুন বৈদিক গণনায়</h1>
+      <p>সঠিক রাশিফল বিশ্লেষণ, বিবাহ যোটক বিচার ও সঠিক প্রতিকার পরামর্শ।</p>
+      <a href="#booking" class="cta-btn"><i class="fa-solid fa-phone"></i> সরাসরি কথা বলুন</a>
+    </div>
+  </section>
+
+  <!-- প্রধান কনটেন্ট কন্টেইনার -->
+  <main class="container">
+
+    <!-- ১. ১২টি রাশির দৈনিক রাশিফল -->
+    <section id="horoscope" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-moon"></i> আজকের দৈনিক রাশিফল</h2>
+      <p class="subtitle">আপনার রাশি নির্বাচন করুন এবং আজকের ফলাফল জানুন</p>
+      
+      <div class="rashi-grid">
+        <button class="rashi-box" onclick="showRashi('মেষ', 'কর্মক্ষেত্রে অগ্রগতির সম্ভাবনা। অর্থ বিনিয়োগের জন্য দিনটি মাঝারি। পারিবারিক শান্তি বজায় থাকবে।', '৮৫%', 'লাল')">♈ মেষ</button>
+        <button class="rashi-box" onclick="showRashi('বৃষ', 'ব্যবসায় ভালো লাভের যোগ রয়েছে। ভ্রমণের সম্ভাবনা তৈরি হতে পারে। স্বাস্থ্যের যত্ন নিন।', '৭৫%', 'সাদা')">♉ বৃষ</button>
+        <button class="rashi-box" onclick="showRashi('মিথুন', 'বুদ্ধিমত্তার সাথে বড় কোনো সিদ্ধান্ত নিতে পারবেন। নতুন বন্ধু লাভের সম্ভাবনা রয়েছে।', '৯০%', 'সবুজ')">♊ মিথুন</button>
+        <button class="rashi-box" onclick="showRashi('কর্কট', 'মানসিক চাপ কিছুটা বাড়তে পারে। আবেগ নিয়ন্ত্রণ করুন এবং কাজে মন দিন।', '৬০%', 'রূপালী')">♋ কর্কট</button>
+        <button class="rashi-box" onclick="showRashi('সিংহ', 'নেতৃত্বসুলভ আচরণ প্রশংসা পাবে। পুরনো অমীমাংসিত অর্থ ফেরত পেতে পারেন।', '৯৫%', 'হলুদ')">♌ সিংহ</button>
+        <button class="rashi-box" onclick="showRashi('কন্যা', 'পড়াশোনা ও প্রতিযোগিতায় ভালো ফল মিলবে। খরচের দিকে কিছুটা রাশ টানুন।', '৭০%', 'গাঢ় নীল')">♍ কন্যা</button>
+        <button class="rashi-box" onclick="showRashi('তুলা', 'সম্পর্ক সুন্দর থাকবে। কোনো আইনি কাজে অগ্রগতি হতে পারে। শুভ দিন।', '৮০%', 'গোলাপী')">♎ তুলা</button>
+        <button class="rashi-box" onclick="showRashi('বৃশ্চিক', 'গোপন শত্রুতা থেকে সাবধান থাকুন। ধৈর্য ধরলে দিনশেষে বড় জয় আসবে।', '৬৫%', 'মেরুন')">♏ বৃশ্চিক</button>
+        <button class="rashi-box" onclick="showRashi('ধনু', 'আধ্যাত্মিক কাজে আগ্রহ বাড়বে। দূর ভ্রমণের সুযোগ আসতে পারে। ভাগ্য সহায় থাকবে।', '৮৮%', 'কমলা')">♐ ধনু</button>
+        <button class="rashi-box" onclick="showRashi('মকর', 'কঠোর পরিশ্রমের স্বীকৃতি পাবেন। জমি বা বাড়ি সংক্রান্ত বিষয়ে ভালো খবর পেতে পারেন।', '৭৮%', 'নীল')">♑ মকর</button>
+        <button class="rashi-box" onclick="showRashi('কুম্ভ', 'আকস্মিক কোনো সুযোগ কর্মজীবন পাল্টে দিতে পারে। বন্ধুর সহযোগিতা পাবেন।', '৮২%', 'বেগুনি')">♒ কুম্ভ</button>
+        <button class="rashi-box" onclick="showRashi('মীন', 'শিল্পী ও সৃজনশীল কাজের সাথে যুক্তদের দারুণ দিন। ব্যয় বৃদ্ধি পেতে পারে।', '৭২%', 'সোনালী')">♓ মীন</button>
+      </div>
+
+      <!-- রাশিফল ফলাফল পপআপ/ডিসপ্লে -->
+      <div id="rashi-details" class="result-box hidden">
+        <h3 id="rashi-name"></h3>
+        <p id="rashi-text"></p>
+        <div class="rashi-meta">
+          <span><strong>ভাগ্যের সহায়তা:</strong> <span id="rashi-luck"></span></span>
+          <span><strong>শুভ রঙ:</strong> <span id="rashi-color"></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ২. বিবাহ যোটক বিচার ও কুষ্ঠি ম্যাচিং ক্যালকুলেটর -->
+    <section id="matchmaking" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-ring"></i> কুষ্ঠি ও বিবাহ গুণমিলন ক্যালকুলেটর</h2>
+      <p class="subtitle">বরের ও কনের রাশি এবং নক্ষত্র দিয়ে বৈদিক অষ্টকূট বিচার করুন</p>
+      
+      <div class="calc-grid">
+        <div class="calc-col">
+          <h4>পাত্রের বিবরণ</h4>
+          <label>পাত্রের নাম:</label>
+          <input type="text" id="groom-name" placeholder="নাম লিখুন">
+          <label>পাত্রের রাশি:</label>
+          <select id="groom-rashi">
+            <option value="1">মেষ</option>
+            <option value="2">বৃষ</option>
+            <option value="3">মিথুন</option>
+            <option value="4">কর্কট</option>
+            <option value="5">সিংহ</option>
+            <option value="6">কন্যা</option>
+            <option value="7">তুলা</option>
+            <option value="8">বৃশ্চিক</option>
+            <option value="9">ধনু</option>
+            <option value="10">মকর</option>
+            <option value="11">কুম্ভ</option>
+            <option value="12">মীন</option>
+          </select>
+        </div>
+
+        <div class="calc-col">
+          <h4>পাত্রীর বিবরণ</h4>
+          <label>পাত্রীর নাম:</label>
+          <input type="text" id="bride-name" placeholder="নাম লিখুন">
+          <label>পাত্রীর রাশি:</label>
+          <select id="bride-rashi">
+            <option value="1">মেষ</option>
+            <option value="2">বৃষ</option>
+            <option value="3">মিথুন</option>
+            <option value="4">কর্কট</option>
+            <option value="5">সিংহ</option>
+            <option value="6">কন্যা</option>
+            <option value="7">তুলা</option>
+            <option value="8">বৃশ্চিক</option>
+            <option value="9">ধনু</option>
+            <option value="10">মকর</option>
+            <option value="11">কুম্ভ</option>
+            <option value="12">মীন</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="primary-btn" onclick="calculateMatch()"><i class="fa-solid fa-calculator"></i> মিল গণনা করুন</button>
+
+      <div id="match-result" class="result-box hidden">
+        <h3 id="match-score"></h3>
+        <p id="match-verdict"></p>
+      </div>
+    </section>
+
+    <!-- ৩. পেইড সেবা ও আয় করার সেকশন -->
+    <section id="services" class="section-card">
+      <h2 class="section-title"><i class="fa-solid fa-gem"></i> আমাদের প্রিমিয়াম জ্যোতিষ সেবা</h2>
+      <p class="subtitle">সরাসরি বুক করে আপনার ব্যক্তিগত ভাগ্যফল ও প্রতিকার রিপোর্ট নিন</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>সম্পূর্ণ কুষ্ঠি ও জন্মছক</h3>
+          <div class="price">₹১৯৯ <span>/ এককালীন</span></div>
+          <ul>
+            <li>২০ পাতার বিস্তারিত পিডিএফ রিপোর্ট</li>
+            <li>দশাশা ও অন্তর্দশা গণনা</li>
+            <li>মাঙ্গলিক ও কালসর্প দোষ বিশ্লেষণ</li>
+            <li>২৪ ঘণ্টার মধ্যে হোয়াটসঅ্যাপে ডেলিভারি</li>
+          </ul>
+          <a href="#booking" class="order-btn" onclick="preselectService('কুষ্ঠি রিপোর্ট (₹১৯৯)')">অর্ডার করুন</a>
+        </div>
+
+        <div class="pricing-card popular">
+          <div class="badge">সর্বাধিক জনপ্রিয়</div>
+          <h3>সরাসরি জ্যোতিষ পরামর্শ</h3>
+          <div class="price">₹৪৯৯ <span>/ ৩০ মিনিট</span></div>
+          <ul>
+            <li>ফোনে বা ভিডিও কলে ওয়ান-টু-ওয়ান কথা</li>
+            <li>ক্যারিয়ার, ব্যবসা ও বৈবাহিক সমস্যা</li>
+            <li>সঠিক রত্ন ও প্রতিকার সংক্রান্ত পরামর্শ</li>
+            <li>১০০% গোপনীয়তা রক্ষা</li>
+          </ul>
+          <a href="#booking" class="order-btn" onclick="preselectService('সরাসরি ফোন পরামর্শ (₹৪৯৯)')">স্লট বুক করুন</a>
+        </div>
+
+        <div class="pricing-card">
+          <h3>রত্নপাথর ও রুদ্রাক্ষ</h3>
+          <div class="price">মূল্য যাচাই সাপেক্ষে</div>
+          <ul>
+            <li>১০০% ল্যাব সার্টিফাইড আসল রত্ন</li>
+            <li>গ্রহ প্রতিকার অনুযায়ী নির্বাচন</li>
+            <li>ক্যাশ অন ডেলিভারি সুবিধা</li>
+            <li>সার্বক্ষণিক সাপোর্ট</li>
+          </ul>
+          <a href="#booking" class="order-btn" onclick="preselectService('রত্নপাথর ও প্রতিকার')">যোগাযোগ করুন</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ৪. বুকিং ও সরাসরি হোয়াটসঅ্যাপ অর্ডার ফর্ম -->
+    <section id="booking" class="section-card">
+      <h2 class="section-title"><i class="fa-brands fa-whatsapp"></i> পরামর্শ বা রিপোর্ট বুক করুন</h2>
+      <p class="subtitle">ফর্মটি পূরণ করলেই সরাসরি হোয়াটসঅ্যাপে আমাদের প্রতিনিধির সাথে যুক্ত হবেন</p>
+
+      <form id="astrology-form" onsubmit="sendToWhatsApp(event)">
+        <div class="form-group">
+          <label>আপনার পুরো নাম *</label>
+          <input type="text" id="cust-name" required placeholder="নাম লিখুন">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>জন্ম তারিখ *</label>
+            <input type="date" id="cust-dob" required>
+          </div>
+          <div class="form-group">
+            <label>জন্মের সময় *</label>
+            <input type="time" id="cust-tob" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>জন্মের স্থান (শহর/জেলা) *</label>
+            <input type="text" id="cust-pob" required placeholder="যেমন: কলকাতা">
+          </div>
+          <div class="form-group">
+            <label>কোন সেবাটি চান? *</label>
+            <select id="cust-service">
+              <option value="কুষ্ঠি রিপোর্ট (₹১৯৯)">কুষ্ঠি রিপোর্ট (₹১৯৯)</option>
+              <option value="সরাসরি ফোন পরামর্শ (₹৪৯৯)">সরাসরি ফোন পরামর্শ (₹৪৯৯)</option>
+              <option value="বিবাহ গুণমিলন (₹২৯৯)">বিবাহ গুণমিলন (₹২৯৯)</option>
+              <option value="রত্নপাথর ও প্রতিকার">রত্নপাথর ও প্রতিকার</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>আপনার মূল সমস্যা বা প্রশ্ন</label>
+          <textarea id="cust-query" rows="3" placeholder="যেমন: চাকরি বা আর্থিক উন্নতি বিষয়ে জানতে চাই..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn"><i class="fa-brands fa-whatsapp"></i> হোয়াটসঅ্যাপে বুকিং কনফার্ম করুন</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ফুটার -->
+  <footer>
+    <p>© ২০২৬ ভাগ্যচক্র জ্যোতিষ সেবা। সর্বস্বত্ব সংরক্ষিত।</p>
+    <p><small>দাবিত্যাগ: জ্যোতিষশাস্ত্র বিশ্বাস ও গণনার ওপর নির্ভরশীল। ব্যক্তিগত দায়িত্ব সহকারে গ্রহণীয়।</small></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
