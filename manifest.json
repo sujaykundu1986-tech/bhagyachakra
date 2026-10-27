@@ -1,0 +1,17 @@
+{
+  "name": "ভাগ্যচক্র - বৈদিক জ্যোতিষ",
+  "short_name": "ভাগ্যচক্র",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
